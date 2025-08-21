@@ -14,11 +14,12 @@ function App() {
 
   return (
     <>
-      <Routes>
+      <SelectingPage cart={cart} setCart={setCart}/>
+      {/* <Routes>
         <Route index element={<SelectingPage cart={cart} setCart={setCart}/>} />
         <Route path='Cart' element={<CartPage cart={cart} setCart={setCart}/>}/>
         <Route path='Order' element={<OrderPage/>}/>
-      </Routes>
+      </Routes> */}
     </>
   )
 }
