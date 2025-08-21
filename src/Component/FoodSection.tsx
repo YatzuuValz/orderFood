@@ -13,7 +13,7 @@ type Prop = {
     isCart: boolean
     cart: Cart[]
     setCart: React.Dispatch<React.SetStateAction<Cart[]>>
-    search: string
+    search?: string
 }
 
 function FoodSection({ isCart, cart, setCart, search }: Prop) {

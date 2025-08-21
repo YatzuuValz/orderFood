@@ -3,6 +3,7 @@ export type Food = {
     price: number;
     Img: string;
     desc:string
+    tags:string
 }
 
 export type Cart = 

@@ -39,7 +39,7 @@ function FoodItem({ isCart,food,cart,setCart }: Prop) {
         }
     }
     return (
-        <div className='flex border p-7 gap-4 hover:bg-zinc-200 cursor-pointer' onClick={()=>{}}>
+        <div className='flex border p-7 gap-4 hover:bg-zinc-100 cursor-pointer' onClick={()=>{}}>
             {/* img */}
             <div className='flex items-center justify-center w-6/10'>
                 <img className='w-1/1 aspect-square object-cover rounded-xl shadow-md/30 shadow-black' src={`/Makanan/${food.Img}`} alt="" />
@@ -78,14 +78,14 @@ function FoodItem({ isCart,food,cart,setCart }: Prop) {
                     // untuk bagian cart page
                     <button 
                         onClick={()=>{handleAddDelete('Delete')}}
-                        className='bg-red-600 hover:bg-red-700  min-w-30 px-3 py-3 mt-3 w-2/4 text-nowrap text-white place-self-center shadow-stone-700 shadow-md/20  cursor-pointer rounded-2xl'>
+                        className='bg-rose-500 hover:bg-rose-600  min-w-30 px-3 py-3 mt-3 w-2/4 text-nowrap text-white place-self-center shadow-stone-700 shadow-md/20  cursor-pointer rounded-2xl'>
                         Delete Item
                         <img src="" alt="" />
                     </button>
                     : 
                     // untuk bagian selecting page
                     <button 
-                    className='bg-green-600 hover:bg-green-700  min-w-30 px-3 py-3 mt-3 w-2/4 text-nowrap text-white place-self-center shadow-stone-700 shadow-md/20  cursor-pointer rounded-2xl'
+                    className='bg-emerald-500 hover:bg-emerald-600  min-w-30 px-3 py-3 mt-3 w-2/4 text-nowrap text-white place-self-center shadow-stone-700 shadow-md/20  cursor-pointer rounded-2xl'
                     onClick={()=>{handleAddDelete('add')}}
                     >
                         Add to cart

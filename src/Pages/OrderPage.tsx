@@ -1,9 +1,11 @@
 import React from 'react'
 
 function OrderPage() {
-  return (
-    <div>OrderPage</div>
-  )
+    return (
+        <>
+
+        </>
+    )
 }
 
 export default OrderPage

@@ -14,6 +14,7 @@ type Props = {
 function CartPage({cart,setCart}:Props) {
     return (
         <>
+            <title>Cart</title>
             <div className='fixed top-0 left-0 right-0'>
                 <Header />
                 <div className='h-px bg-black'></div>

@@ -5,49 +5,64 @@ const foods:Food[] = [
         name: 'Burger',
         price: 28000,
         Img: 'burger.jpg',
-        desc:''
+        desc:'',
+        tags:'chicken,bread,cemilan,snack'
     },
     {
         name: 'Ayam Bakar',
         price: 18000,
         Img: 'AyamBakar.jpg',
-        desc:''
+        desc:'',
+        tags:'ayam'
     },
     {
         name: 'Tempe',
         price: 10000,
         Img: 'Tempe.jpg',
-        desc:''
+        desc:'',
+        tags:'vegetarian,vegtable'
     },
     {
         name: 'Sushi',
         price: 30000,
         Img: 'Sushi.jpg',
-        desc:''
+        desc:'',
+        tags:'japan,'
     },
     {
         name: 'Ayam Kremes',
         price: 18000,
         Img: 'Kremes.jpeg',
-        desc:''
+        desc:'',
+        tags:'ayam'
     },
     {
         name: 'Sate Padang',
         price: 40000,
         Img: 'SatePadang.jpg',
-        desc:''
+        desc:'',
+        tags:'sate,ayam'
     },
     {
         name: 'Sate Ayam Kecap',
         price: 40000,
         Img: 'SateAyamKecap.jpeg',
-        desc:''
+        desc:'',
+        tags:'ayam,sate'
     },
     {
         name: 'Martabak Mesir',
         price: 18000,
         Img: 'MartabakMesir.jpg',
-        desc:''
+        desc:'',
+        tags:'snack,martabak'
+    },
+    {
+        name: 'Sop Iga',
+        price: 18000,
+        Img: 'SopIga.jpg',
+        desc:'',
+        tags:'sapi,daging'
     },
 ]
 export default foods
