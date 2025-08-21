@@ -33,14 +33,20 @@ const foods:Food[] = [
     },
     {
         name: 'Sate Padang',
-        price: 18000,
+        price: 40000,
         Img: 'SatePadang.jpg',
         desc:''
     },
     {
         name: 'Sate Ayam Kecap',
-        price: 18000,
+        price: 40000,
         Img: 'SateAyamKecap.jpeg',
+        desc:''
+    },
+    {
+        name: 'Martabak Mesir',
+        price: 18000,
+        Img: 'MartabakMesir.jpg',
         desc:''
     },
 ]
