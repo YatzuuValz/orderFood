@@ -64,5 +64,12 @@ const foods:Food[] = [
         desc:'',
         tags:'sapi,daging'
     },
+    {
+        name: 'Tahu Goreng',
+        price: 10000,
+        Img: 'TahuGoreng.jpg',
+        desc:'',
+        tags:'vegetarian'
+    },
 ]
 export default foods

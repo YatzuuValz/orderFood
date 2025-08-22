@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route index element={<SelectingPage cart={cart} setCart={setCart}/>} />
         <Route path='Cart' element={<CartPage cart={cart} setCart={setCart}/>}/>
-        <Route path='Order' element={<OrderPage/>}/>
+        <Route path='Order' element={<OrderPage cart={cart} setCart={setCart} />}/>
       </Routes>
     </>
   )

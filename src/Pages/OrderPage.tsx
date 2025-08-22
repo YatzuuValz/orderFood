@@ -1,9 +1,58 @@
+import type { Cart } from "../BE/type"
+import Header from "../Component/Header"
+import { NavLink } from "react-router"
 
-function OrderPage() {
+type Props = {
+    cart:Cart[]
+    setCart:React.Dispatch<React.SetStateAction<Cart[]>>
+}
+
+function OrderPage({cart,setCart}:Props) {
+    const total = cart.reduce((acc,item)=> {
+                    return acc + (item.price * item.quantity)},0)
     return (
-        <>
-
-        </>
+    <>
+        <title>Order</title>
+        <div className='fixed top-0 left-0 right-0'>
+            <Header />
+            <div className='h-px bg-black'></div>
+            <div className='flex justify-center bg-neutral-700 p-3 h-14 gap-10'>
+                <NavLink to={'/'} className='flex items-center justify-center bg-emerald-500 hover:bg-emerald-600 rounded-2xl w-1/3 shadow-stone-700 shadow-lg/40 cursor-pointer'>
+                    <button >
+                        Add More
+                    </button>
+                </NavLink>
+                <NavLink to={'/Cart'} className='flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-2xl w-1/2 shadow-stone-700 shadow-lg/40 cursor-pointer'>
+                    <button >
+                        Back to Cart
+                    </button>
+                </NavLink>
+            </div>
+        </div>
+        <div className="h-screen flex items-center">
+            <div className="flex h-6/10 w-screen items-center justify-around mt-20">
+                <div className="border-2 border-black h-full w-4/10 overflow-y-scroll">
+                    {/* <p className="relative -top-3">Shooping Cart</p> */}
+                    {cart.map((item,index)=>{
+                        return (
+                            <div key={index} className="w-full flex border-b-2">
+                                <p className="py-5 pl-5 w-8/10 bg-red-50">{item.name}</p>
+                                <p className="py-5 w-1/10 bg-yellow-50">{item.quantity}x</p>
+                                <p className="py-5 w-1/10 bg-blue-50">{item.price}</p>
+                            </div>
+                        )
+                    })}
+                </div>
+                <div className="flex flex-col border-2 border-black h-7/10 w-4/10 self-start p-5">
+                    <p>SubTotal: {total}</p>
+                    <p>Tax: {Math.floor(total*0.01)} </p>
+                    
+                    <button className="w-8/10 mt-auto rounded-lg bg-indigo-500 hover:bg-indigo-600 py-2 self-center">Place Order</button>
+                    
+                </div>
+            </div>
+        </div>
+    </>
     )
 }
 
