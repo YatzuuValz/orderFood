@@ -20,12 +20,12 @@ function CartPage({cart,setCart}:Props) {
                 <div className='h-px bg-black'></div>
                 <div className='flex justify-center bg-neutral-700 p-3 h-14 gap-10'>
                     <NavLink to={'/'} className='flex items-center justify-center bg-emerald-500 hover:bg-emerald-600 rounded-2xl w-1/3 shadow-stone-700 shadow-lg/40 cursor-pointer'>
-                        <button >
+                        <button className='text-white' >
                             Add More
                         </button>
                     </NavLink>
                     <NavLink to={'/Order'} className='flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-2xl w-1/2 shadow-stone-700 shadow-lg/40 cursor-pointer'>
-                        <button >
+                        <button className='text-white'>
                             Order Now
                         </button>
                     </NavLink>

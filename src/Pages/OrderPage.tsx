@@ -18,12 +18,12 @@ function OrderPage({cart,setCart}:Props) {
             <div className='h-px bg-black'></div>
             <div className='flex justify-center bg-neutral-700 p-3 h-14 gap-10'>
                 <NavLink to={'/'} className='flex items-center justify-center bg-emerald-500 hover:bg-emerald-600 rounded-2xl w-1/3 shadow-stone-700 shadow-lg/40 cursor-pointer'>
-                    <button >
+                    <button className="text-white">
                         Add More
                     </button>
                 </NavLink>
                 <NavLink to={'/Cart'} className='flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-2xl w-1/2 shadow-stone-700 shadow-lg/40 cursor-pointer'>
-                    <button >
+                    <button className="text-white">
                         Back to Cart
                     </button>
                 </NavLink>
@@ -36,9 +36,10 @@ function OrderPage({cart,setCart}:Props) {
                     {cart.map((item,index)=>{
                         return (
                             <div key={index} className="w-full flex border-b-2">
-                                <p className="py-5 pl-5 w-8/10 bg-red-50">{item.name}</p>
-                                <p className="py-5 w-1/10 bg-yellow-50">{item.quantity}x</p>
-                                <p className="py-5 w-1/10 bg-blue-50">{item.price}</p>
+                                <p className="py-5 pl-5 w-5/10 ">{item.name}</p>
+                                <p className="py-5 w-1/10 ">{item.quantity}x</p>
+                                <p className="py-5 w-25/100">Rp. {item.price.toLocaleString()}</p>
+                                <p className="py-5 w-25/100">Rp. {(item.price*item.quantity).toLocaleString()}</p>
                             </div>
                         )
                     })}
@@ -47,7 +48,7 @@ function OrderPage({cart,setCart}:Props) {
                     <p>SubTotal: {total}</p>
                     <p>Tax: {Math.floor(total*0.01)} </p>
                     
-                    <button className="w-8/10 mt-auto rounded-lg bg-indigo-500 hover:bg-indigo-600 py-2 self-center">Place Order</button>
+                    <button className="w-8/10 mt-auto rounded-lg bg-indigo-500 hover:bg-indigo-600 py-2 self-center text-white">Place Order</button>
                     
                 </div>
             </div>
