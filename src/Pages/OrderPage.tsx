@@ -10,6 +10,7 @@ type Props = {
 function OrderPage({cart,setCart}:Props) {
     const total = cart.reduce((acc,item)=> {
                     return acc + (item.price * item.quantity)},0)
+    const tax = Math.floor(total * 0.01)
     return (
     <>
         <title>Order</title>
@@ -33,6 +34,12 @@ function OrderPage({cart,setCart}:Props) {
             <div className="flex h-6/10 w-screen items-center justify-around mt-20">
                 <div className="border-2 border-black h-full w-4/10 overflow-y-scroll">
                     {/* <p className="relative -top-3">Shooping Cart</p> */}
+                    <div className="w-full flex border-b-2">
+                                <p className="py-1 pl-5 w-5/10 ">Name</p>
+                                <p className="py-1 w-1/10 ">Q</p>
+                                <p className="py-1 w-25/100">Harga</p>
+                                <p className="py-1 w-25/100">Total</p>
+                            </div>
                     {cart.map((item,index)=>{
                         return (
                             <div key={index} className="w-full flex border-b-2">
@@ -46,7 +53,8 @@ function OrderPage({cart,setCart}:Props) {
                 </div>
                 <div className="flex flex-col border-2 border-black h-7/10 w-4/10 self-start p-5">
                     <p>SubTotal: {total}</p>
-                    <p>Tax: {Math.floor(total*0.01)} </p>
+                    <p>Tax: {tax} </p>
+                    <p>Total: {total+tax}</p>
                     
                     <button className="w-8/10 mt-auto rounded-lg bg-indigo-500 hover:bg-indigo-600 py-2 self-center text-white">Place Order</button>
                     
