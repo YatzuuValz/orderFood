@@ -56,7 +56,7 @@ function OrderPage({cart,setCart}:Props) {
                     <p>Tax: {tax} </p>
                     <p>Total: {total+tax}</p>
                     
-                    <button className="w-8/10 mt-auto rounded-lg bg-indigo-500 hover:bg-indigo-600 py-2 self-center text-white">Place Order</button>
+                    <button className="w-8/10 mt-auto rounded-lg bg-indigo-500 hover:bg-indigo-600 py-2 self-center text-white shadow-stone-700 shadow-lg/30">Place Order</button>
                     
                 </div>
             </div>
